@@ -64,7 +64,7 @@ session = client.proxy.services('KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
 
 print(session.sid)
 
-# Step 4: Craete participants
+# Step 4: Create participants
 participant = client.proxy \
                     .services('KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
                     .sessions('KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
@@ -89,7 +89,11 @@ print(message_interaction.sid)
 - Run your application
 ```
 $ cd ~/environment/twilio-proxy-demo
-$ python3 app.py
+$ python3 1_create_service.py
+$ python3 2_add_phone_number.py
+$ python3 3_create_session.py
+$ python3 4_create_participant.py
+$ python3 5_send_message_to_participant.py
 ```
 
 ## References
