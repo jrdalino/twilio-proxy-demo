@@ -2,14 +2,13 @@ from twilio.rest import Client
 from config import ACCOUNT_SID, AUTH_TOKEN
 
 
-# Your Account Sid and Auth Token from twilio.com/console
-# DANGER! This is insecure. See http://twil.io/secure
 account_sid = ACCOUNT_SID
 auth_token = AUTH_TOKEN
 client = Client(account_sid, auth_token)
 
 # Step 1: Create a Service
 service = client.proxy.services.create(unique_name='unique_name')
+
 print(service.sid)
 
 # Step 2.a: Add a phone number A to your service
@@ -35,7 +34,7 @@ session = client.proxy.services('KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
 
 print(session.sid)
 
-# Step 4: Craete participants
+# Step 4: Create participants
 participant = client.proxy \
                     .services('KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
                     .sessions('KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
