@@ -1,32 +1,3 @@
-# Twilio Proxy Demo
-
-## Requirements
-- a Twilio account – sign up for free
-- Python 2.x or 3.x
-- the Twilio Python helper library
-
-## Environment and project setup
-- Sign up for Twilio, Purchase two Twilio Phone Number and Note Account SID, Auth Token & Phone Number SID
-
-- Install and activate virtualenv
-```
-python3 -m venv venv
-source venv/bin/activate
-```
-
-- Create requirements.txt
-```
-twilio
-```
-
-- Installs dependencies
-```
-pip install -r requirements.txt
-```
-
-## Create Python App
-- Create app.py
-```
 from twilio.rest import Client
 from config import ACCOUNT_SID, AUTH_TOKEN
 
@@ -84,14 +55,3 @@ message_interaction = client.proxy \
 print(message_interaction.sid)
 
 # Step 6: Make a voice call - If your Twilio Phone Numbers are voice capable, you're now ready for a proxied voice conversation
-```
-
-- Run your application
-```
-$ cd ~/environment/twilio-proxy-demo
-$ python3 app.py
-```
-
-## References
-- https://www.twilio.com/docs/proxy
-- https://www.twilio.com/docs/proxy/quickstart
